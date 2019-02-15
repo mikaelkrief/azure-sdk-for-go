@@ -36,14 +36,6 @@ const (
 	Deny  Access = original.Deny
 )
 
-type Action = original.Action
-
-const (
-	ActionAllow Action = original.ActionAllow
-	ActionBlock Action = original.ActionBlock
-	ActionLog   Action = original.ActionLog
-)
-
 type ApplicationGatewayBackendHealthServerHealth = original.ApplicationGatewayBackendHealthServerHealth
 
 const (
@@ -336,13 +328,6 @@ const (
 	EffectiveSecurityRuleProtocolUDP EffectiveSecurityRuleProtocol = original.EffectiveSecurityRuleProtocolUDP
 )
 
-type EnabledState = original.EnabledState
-
-const (
-	EnabledStateDisabled EnabledState = original.EnabledStateDisabled
-	EnabledStateEnabled  EnabledState = original.EnabledStateEnabled
-)
-
 type EvaluationState = original.EvaluationState
 
 const (
@@ -537,26 +522,6 @@ const (
 	LoadDistributionSourceIPProtocol LoadDistribution = original.LoadDistributionSourceIPProtocol
 )
 
-type MatchVariable = original.MatchVariable
-
-const (
-	PostArgs       MatchVariable = original.PostArgs
-	QueryString    MatchVariable = original.QueryString
-	RemoteAddr     MatchVariable = original.RemoteAddr
-	RequestBody    MatchVariable = original.RequestBody
-	RequestCookies MatchVariable = original.RequestCookies
-	RequestHeaders MatchVariable = original.RequestHeaders
-	RequestMethod  MatchVariable = original.RequestMethod
-	RequestURI     MatchVariable = original.RequestURI
-)
-
-type Mode = original.Mode
-
-const (
-	ModeDetection  Mode = original.ModeDetection
-	ModePrevention Mode = original.ModePrevention
-)
-
 type NextHopType = original.NextHopType
 
 const (
@@ -583,21 +548,6 @@ const (
 	OperationStatusFailed     OperationStatus = original.OperationStatusFailed
 	OperationStatusInProgress OperationStatus = original.OperationStatusInProgress
 	OperationStatusSucceeded  OperationStatus = original.OperationStatusSucceeded
-)
-
-type Operator = original.Operator
-
-const (
-	OperatorBeginsWith         Operator = original.OperatorBeginsWith
-	OperatorContains           Operator = original.OperatorContains
-	OperatorEndsWith           Operator = original.OperatorEndsWith
-	OperatorEqual              Operator = original.OperatorEqual
-	OperatorGreaterThan        Operator = original.OperatorGreaterThan
-	OperatorGreaterThanOrEqual Operator = original.OperatorGreaterThanOrEqual
-	OperatorIPMatch            Operator = original.OperatorIPMatch
-	OperatorLessThan           Operator = original.OperatorLessThan
-	OperatorLessThanOrEqual    Operator = original.OperatorLessThanOrEqual
-	OperatorRegex              Operator = original.OperatorRegex
 )
 
 type Origin = original.Origin
@@ -768,17 +718,6 @@ const (
 	SeverityWarning Severity = original.SeverityWarning
 )
 
-type Transform = original.Transform
-
-const (
-	HTMLEntityDecode Transform = original.HTMLEntityDecode
-	Lowercase        Transform = original.Lowercase
-	RemoveNulls      Transform = original.RemoveNulls
-	Trim             Transform = original.Trim
-	URLDecode        Transform = original.URLDecode
-	URLEncode        Transform = original.URLEncode
-)
-
 type TransportProtocol = original.TransportProtocol
 
 const (
@@ -918,6 +857,56 @@ const (
 	RouteBased  VpnType = original.RouteBased
 )
 
+type WebApplicationFirewallAction = original.WebApplicationFirewallAction
+
+const (
+	WebApplicationFirewallActionAllow WebApplicationFirewallAction = original.WebApplicationFirewallActionAllow
+	WebApplicationFirewallActionBlock WebApplicationFirewallAction = original.WebApplicationFirewallActionBlock
+	WebApplicationFirewallActionLog   WebApplicationFirewallAction = original.WebApplicationFirewallActionLog
+)
+
+type WebApplicationFirewallEnabledState = original.WebApplicationFirewallEnabledState
+
+const (
+	WebApplicationFirewallEnabledStateDisabled WebApplicationFirewallEnabledState = original.WebApplicationFirewallEnabledStateDisabled
+	WebApplicationFirewallEnabledStateEnabled  WebApplicationFirewallEnabledState = original.WebApplicationFirewallEnabledStateEnabled
+)
+
+type WebApplicationFirewallMatchVariable = original.WebApplicationFirewallMatchVariable
+
+const (
+	PostArgs       WebApplicationFirewallMatchVariable = original.PostArgs
+	QueryString    WebApplicationFirewallMatchVariable = original.QueryString
+	RemoteAddr     WebApplicationFirewallMatchVariable = original.RemoteAddr
+	RequestBody    WebApplicationFirewallMatchVariable = original.RequestBody
+	RequestCookies WebApplicationFirewallMatchVariable = original.RequestCookies
+	RequestHeaders WebApplicationFirewallMatchVariable = original.RequestHeaders
+	RequestMethod  WebApplicationFirewallMatchVariable = original.RequestMethod
+	RequestURI     WebApplicationFirewallMatchVariable = original.RequestURI
+)
+
+type WebApplicationFirewallMode = original.WebApplicationFirewallMode
+
+const (
+	WebApplicationFirewallModeDetection  WebApplicationFirewallMode = original.WebApplicationFirewallModeDetection
+	WebApplicationFirewallModePrevention WebApplicationFirewallMode = original.WebApplicationFirewallModePrevention
+)
+
+type WebApplicationFirewallOperator = original.WebApplicationFirewallOperator
+
+const (
+	WebApplicationFirewallOperatorBeginsWith         WebApplicationFirewallOperator = original.WebApplicationFirewallOperatorBeginsWith
+	WebApplicationFirewallOperatorContains           WebApplicationFirewallOperator = original.WebApplicationFirewallOperatorContains
+	WebApplicationFirewallOperatorEndsWith           WebApplicationFirewallOperator = original.WebApplicationFirewallOperatorEndsWith
+	WebApplicationFirewallOperatorEqual              WebApplicationFirewallOperator = original.WebApplicationFirewallOperatorEqual
+	WebApplicationFirewallOperatorGreaterThan        WebApplicationFirewallOperator = original.WebApplicationFirewallOperatorGreaterThan
+	WebApplicationFirewallOperatorGreaterThanOrEqual WebApplicationFirewallOperator = original.WebApplicationFirewallOperatorGreaterThanOrEqual
+	WebApplicationFirewallOperatorIPMatch            WebApplicationFirewallOperator = original.WebApplicationFirewallOperatorIPMatch
+	WebApplicationFirewallOperatorLessThan           WebApplicationFirewallOperator = original.WebApplicationFirewallOperatorLessThan
+	WebApplicationFirewallOperatorLessThanOrEqual    WebApplicationFirewallOperator = original.WebApplicationFirewallOperatorLessThanOrEqual
+	WebApplicationFirewallOperatorRegex              WebApplicationFirewallOperator = original.WebApplicationFirewallOperatorRegex
+)
+
 type WebApplicationFirewallPolicy = original.WebApplicationFirewallPolicy
 
 const (
@@ -927,6 +916,17 @@ const (
 	WebApplicationFirewallPolicyDisabling WebApplicationFirewallPolicy = original.WebApplicationFirewallPolicyDisabling
 	WebApplicationFirewallPolicyEnabled   WebApplicationFirewallPolicy = original.WebApplicationFirewallPolicyEnabled
 	WebApplicationFirewallPolicyEnabling  WebApplicationFirewallPolicy = original.WebApplicationFirewallPolicyEnabling
+)
+
+type WebApplicationFirewallTransform = original.WebApplicationFirewallTransform
+
+const (
+	HTMLEntityDecode WebApplicationFirewallTransform = original.HTMLEntityDecode
+	Lowercase        WebApplicationFirewallTransform = original.Lowercase
+	RemoveNulls      WebApplicationFirewallTransform = original.RemoveNulls
+	Trim             WebApplicationFirewallTransform = original.Trim
+	URLDecode        WebApplicationFirewallTransform = original.URLDecode
+	URLEncode        WebApplicationFirewallTransform = original.URLEncode
 )
 
 type AddressSpace = original.AddressSpace
@@ -1402,7 +1402,7 @@ type LogSpecification = original.LogSpecification
 type ManagedServiceIdentity = original.ManagedServiceIdentity
 type ManagedServiceIdentityUserAssignedIdentitiesValue = original.ManagedServiceIdentityUserAssignedIdentitiesValue
 type MatchCondition = original.MatchCondition
-type MatchVariable1 = original.MatchVariable1
+type MatchVariable = original.MatchVariable
 type MatchedRule = original.MatchedRule
 type MetricSpecification = original.MetricSpecification
 type NextHopParameters = original.NextHopParameters
@@ -2523,9 +2523,6 @@ func NewWithBaseURI(baseURI string, subscriptionID string) BaseClient {
 func PossibleAccessValues() []Access {
 	return original.PossibleAccessValues()
 }
-func PossibleActionValues() []Action {
-	return original.PossibleActionValues()
-}
 func PossibleApplicationGatewayBackendHealthServerHealthValues() []ApplicationGatewayBackendHealthServerHealth {
 	return original.PossibleApplicationGatewayBackendHealthServerHealthValues()
 }
@@ -2625,9 +2622,6 @@ func PossibleEffectiveRouteStateValues() []EffectiveRouteState {
 func PossibleEffectiveSecurityRuleProtocolValues() []EffectiveSecurityRuleProtocol {
 	return original.PossibleEffectiveSecurityRuleProtocolValues()
 }
-func PossibleEnabledStateValues() []EnabledState {
-	return original.PossibleEnabledStateValues()
-}
 func PossibleEvaluationStateValues() []EvaluationState {
 	return original.PossibleEvaluationStateValues()
 }
@@ -2697,12 +2691,6 @@ func PossibleLoadBalancerSkuNameValues() []LoadBalancerSkuName {
 func PossibleLoadDistributionValues() []LoadDistribution {
 	return original.PossibleLoadDistributionValues()
 }
-func PossibleMatchVariableValues() []MatchVariable {
-	return original.PossibleMatchVariableValues()
-}
-func PossibleModeValues() []Mode {
-	return original.PossibleModeValues()
-}
 func PossibleNextHopTypeValues() []NextHopType {
 	return original.PossibleNextHopTypeValues()
 }
@@ -2711,9 +2699,6 @@ func PossibleOfficeTrafficCategoryValues() []OfficeTrafficCategory {
 }
 func PossibleOperationStatusValues() []OperationStatus {
 	return original.PossibleOperationStatusValues()
-}
-func PossibleOperatorValues() []Operator {
-	return original.PossibleOperatorValues()
 }
 func PossibleOriginValues() []Origin {
 	return original.PossibleOriginValues()
@@ -2775,9 +2760,6 @@ func PossibleServiceProviderProvisioningStateValues() []ServiceProviderProvision
 func PossibleSeverityValues() []Severity {
 	return original.PossibleSeverityValues()
 }
-func PossibleTransformValues() []Transform {
-	return original.PossibleTransformValues()
-}
 func PossibleTransportProtocolValues() []TransportProtocol {
 	return original.PossibleTransportProtocolValues()
 }
@@ -2823,8 +2805,26 @@ func PossibleVpnGatewayTunnelingProtocolValues() []VpnGatewayTunnelingProtocol {
 func PossibleVpnTypeValues() []VpnType {
 	return original.PossibleVpnTypeValues()
 }
+func PossibleWebApplicationFirewallActionValues() []WebApplicationFirewallAction {
+	return original.PossibleWebApplicationFirewallActionValues()
+}
+func PossibleWebApplicationFirewallEnabledStateValues() []WebApplicationFirewallEnabledState {
+	return original.PossibleWebApplicationFirewallEnabledStateValues()
+}
+func PossibleWebApplicationFirewallMatchVariableValues() []WebApplicationFirewallMatchVariable {
+	return original.PossibleWebApplicationFirewallMatchVariableValues()
+}
+func PossibleWebApplicationFirewallModeValues() []WebApplicationFirewallMode {
+	return original.PossibleWebApplicationFirewallModeValues()
+}
+func PossibleWebApplicationFirewallOperatorValues() []WebApplicationFirewallOperator {
+	return original.PossibleWebApplicationFirewallOperatorValues()
+}
 func PossibleWebApplicationFirewallPolicyValues() []WebApplicationFirewallPolicy {
 	return original.PossibleWebApplicationFirewallPolicyValues()
+}
+func PossibleWebApplicationFirewallTransformValues() []WebApplicationFirewallTransform {
+	return original.PossibleWebApplicationFirewallTransformValues()
 }
 func UserAgent() string {
 	return original.UserAgent() + " profiles/latest"

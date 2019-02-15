@@ -46,23 +46,6 @@ func PossibleAccessValues() []Access {
 	return []Access{Allow, Deny}
 }
 
-// Action enumerates the values for action.
-type Action string
-
-const (
-	// ActionAllow ...
-	ActionAllow Action = "Allow"
-	// ActionBlock ...
-	ActionBlock Action = "Block"
-	// ActionLog ...
-	ActionLog Action = "Log"
-)
-
-// PossibleActionValues returns an array of possible values for the Action const type.
-func PossibleActionValues() []Action {
-	return []Action{ActionAllow, ActionBlock, ActionLog}
-}
-
 // ApplicationGatewayBackendHealthServerHealth enumerates the values for application gateway backend health
 // server health.
 type ApplicationGatewayBackendHealthServerHealth string
@@ -685,21 +668,6 @@ func PossibleEffectiveSecurityRuleProtocolValues() []EffectiveSecurityRuleProtoc
 	return []EffectiveSecurityRuleProtocol{EffectiveSecurityRuleProtocolAll, EffectiveSecurityRuleProtocolTCP, EffectiveSecurityRuleProtocolUDP}
 }
 
-// EnabledState enumerates the values for enabled state.
-type EnabledState string
-
-const (
-	// EnabledStateDisabled ...
-	EnabledStateDisabled EnabledState = "Disabled"
-	// EnabledStateEnabled ...
-	EnabledStateEnabled EnabledState = "Enabled"
-)
-
-// PossibleEnabledStateValues returns an array of possible values for the EnabledState const type.
-func PossibleEnabledStateValues() []EnabledState {
-	return []EnabledState{EnabledStateDisabled, EnabledStateEnabled}
-}
-
 // EvaluationState enumerates the values for evaluation state.
 type EvaluationState string
 
@@ -1112,48 +1080,6 @@ func PossibleLoadDistributionValues() []LoadDistribution {
 	return []LoadDistribution{LoadDistributionDefault, LoadDistributionSourceIP, LoadDistributionSourceIPProtocol}
 }
 
-// MatchVariable enumerates the values for match variable.
-type MatchVariable string
-
-const (
-	// PostArgs ...
-	PostArgs MatchVariable = "PostArgs"
-	// QueryString ...
-	QueryString MatchVariable = "QueryString"
-	// RemoteAddr ...
-	RemoteAddr MatchVariable = "RemoteAddr"
-	// RequestBody ...
-	RequestBody MatchVariable = "RequestBody"
-	// RequestCookies ...
-	RequestCookies MatchVariable = "RequestCookies"
-	// RequestHeaders ...
-	RequestHeaders MatchVariable = "RequestHeaders"
-	// RequestMethod ...
-	RequestMethod MatchVariable = "RequestMethod"
-	// RequestURI ...
-	RequestURI MatchVariable = "RequestUri"
-)
-
-// PossibleMatchVariableValues returns an array of possible values for the MatchVariable const type.
-func PossibleMatchVariableValues() []MatchVariable {
-	return []MatchVariable{PostArgs, QueryString, RemoteAddr, RequestBody, RequestCookies, RequestHeaders, RequestMethod, RequestURI}
-}
-
-// Mode enumerates the values for mode.
-type Mode string
-
-const (
-	// ModeDetection ...
-	ModeDetection Mode = "Detection"
-	// ModePrevention ...
-	ModePrevention Mode = "Prevention"
-)
-
-// PossibleModeValues returns an array of possible values for the Mode const type.
-func PossibleModeValues() []Mode {
-	return []Mode{ModeDetection, ModePrevention}
-}
-
 // NextHopType enumerates the values for next hop type.
 type NextHopType string
 
@@ -1211,37 +1137,6 @@ const (
 // PossibleOperationStatusValues returns an array of possible values for the OperationStatus const type.
 func PossibleOperationStatusValues() []OperationStatus {
 	return []OperationStatus{OperationStatusFailed, OperationStatusInProgress, OperationStatusSucceeded}
-}
-
-// Operator enumerates the values for operator.
-type Operator string
-
-const (
-	// OperatorBeginsWith ...
-	OperatorBeginsWith Operator = "BeginsWith"
-	// OperatorContains ...
-	OperatorContains Operator = "Contains"
-	// OperatorEndsWith ...
-	OperatorEndsWith Operator = "EndsWith"
-	// OperatorEqual ...
-	OperatorEqual Operator = "Equal"
-	// OperatorGreaterThan ...
-	OperatorGreaterThan Operator = "GreaterThan"
-	// OperatorGreaterThanOrEqual ...
-	OperatorGreaterThanOrEqual Operator = "GreaterThanOrEqual"
-	// OperatorIPMatch ...
-	OperatorIPMatch Operator = "IPMatch"
-	// OperatorLessThan ...
-	OperatorLessThan Operator = "LessThan"
-	// OperatorLessThanOrEqual ...
-	OperatorLessThanOrEqual Operator = "LessThanOrEqual"
-	// OperatorRegex ...
-	OperatorRegex Operator = "Regex"
-)
-
-// PossibleOperatorValues returns an array of possible values for the Operator const type.
-func PossibleOperatorValues() []Operator {
-	return []Operator{OperatorBeginsWith, OperatorContains, OperatorEndsWith, OperatorEqual, OperatorGreaterThan, OperatorGreaterThanOrEqual, OperatorIPMatch, OperatorLessThan, OperatorLessThanOrEqual, OperatorRegex}
 }
 
 // Origin enumerates the values for origin.
@@ -1600,29 +1495,6 @@ func PossibleSeverityValues() []Severity {
 	return []Severity{SeverityError, SeverityWarning}
 }
 
-// Transform enumerates the values for transform.
-type Transform string
-
-const (
-	// HTMLEntityDecode ...
-	HTMLEntityDecode Transform = "HtmlEntityDecode"
-	// Lowercase ...
-	Lowercase Transform = "Lowercase"
-	// RemoveNulls ...
-	RemoveNulls Transform = "RemoveNulls"
-	// Trim ...
-	Trim Transform = "Trim"
-	// URLDecode ...
-	URLDecode Transform = "UrlDecode"
-	// URLEncode ...
-	URLEncode Transform = "UrlEncode"
-)
-
-// PossibleTransformValues returns an array of possible values for the Transform const type.
-func PossibleTransformValues() []Transform {
-	return []Transform{HTMLEntityDecode, Lowercase, RemoveNulls, Trim, URLDecode, URLEncode}
-}
-
 // TransportProtocol enumerates the values for transport protocol.
 type TransportProtocol string
 
@@ -1917,6 +1789,111 @@ func PossibleVpnTypeValues() []VpnType {
 	return []VpnType{PolicyBased, RouteBased}
 }
 
+// WebApplicationFirewallAction enumerates the values for web application firewall action.
+type WebApplicationFirewallAction string
+
+const (
+	// WebApplicationFirewallActionAllow ...
+	WebApplicationFirewallActionAllow WebApplicationFirewallAction = "Allow"
+	// WebApplicationFirewallActionBlock ...
+	WebApplicationFirewallActionBlock WebApplicationFirewallAction = "Block"
+	// WebApplicationFirewallActionLog ...
+	WebApplicationFirewallActionLog WebApplicationFirewallAction = "Log"
+)
+
+// PossibleWebApplicationFirewallActionValues returns an array of possible values for the WebApplicationFirewallAction const type.
+func PossibleWebApplicationFirewallActionValues() []WebApplicationFirewallAction {
+	return []WebApplicationFirewallAction{WebApplicationFirewallActionAllow, WebApplicationFirewallActionBlock, WebApplicationFirewallActionLog}
+}
+
+// WebApplicationFirewallEnabledState enumerates the values for web application firewall enabled state.
+type WebApplicationFirewallEnabledState string
+
+const (
+	// WebApplicationFirewallEnabledStateDisabled ...
+	WebApplicationFirewallEnabledStateDisabled WebApplicationFirewallEnabledState = "Disabled"
+	// WebApplicationFirewallEnabledStateEnabled ...
+	WebApplicationFirewallEnabledStateEnabled WebApplicationFirewallEnabledState = "Enabled"
+)
+
+// PossibleWebApplicationFirewallEnabledStateValues returns an array of possible values for the WebApplicationFirewallEnabledState const type.
+func PossibleWebApplicationFirewallEnabledStateValues() []WebApplicationFirewallEnabledState {
+	return []WebApplicationFirewallEnabledState{WebApplicationFirewallEnabledStateDisabled, WebApplicationFirewallEnabledStateEnabled}
+}
+
+// WebApplicationFirewallMatchVariable enumerates the values for web application firewall match variable.
+type WebApplicationFirewallMatchVariable string
+
+const (
+	// PostArgs ...
+	PostArgs WebApplicationFirewallMatchVariable = "PostArgs"
+	// QueryString ...
+	QueryString WebApplicationFirewallMatchVariable = "QueryString"
+	// RemoteAddr ...
+	RemoteAddr WebApplicationFirewallMatchVariable = "RemoteAddr"
+	// RequestBody ...
+	RequestBody WebApplicationFirewallMatchVariable = "RequestBody"
+	// RequestCookies ...
+	RequestCookies WebApplicationFirewallMatchVariable = "RequestCookies"
+	// RequestHeaders ...
+	RequestHeaders WebApplicationFirewallMatchVariable = "RequestHeaders"
+	// RequestMethod ...
+	RequestMethod WebApplicationFirewallMatchVariable = "RequestMethod"
+	// RequestURI ...
+	RequestURI WebApplicationFirewallMatchVariable = "RequestUri"
+)
+
+// PossibleWebApplicationFirewallMatchVariableValues returns an array of possible values for the WebApplicationFirewallMatchVariable const type.
+func PossibleWebApplicationFirewallMatchVariableValues() []WebApplicationFirewallMatchVariable {
+	return []WebApplicationFirewallMatchVariable{PostArgs, QueryString, RemoteAddr, RequestBody, RequestCookies, RequestHeaders, RequestMethod, RequestURI}
+}
+
+// WebApplicationFirewallMode enumerates the values for web application firewall mode.
+type WebApplicationFirewallMode string
+
+const (
+	// WebApplicationFirewallModeDetection ...
+	WebApplicationFirewallModeDetection WebApplicationFirewallMode = "Detection"
+	// WebApplicationFirewallModePrevention ...
+	WebApplicationFirewallModePrevention WebApplicationFirewallMode = "Prevention"
+)
+
+// PossibleWebApplicationFirewallModeValues returns an array of possible values for the WebApplicationFirewallMode const type.
+func PossibleWebApplicationFirewallModeValues() []WebApplicationFirewallMode {
+	return []WebApplicationFirewallMode{WebApplicationFirewallModeDetection, WebApplicationFirewallModePrevention}
+}
+
+// WebApplicationFirewallOperator enumerates the values for web application firewall operator.
+type WebApplicationFirewallOperator string
+
+const (
+	// WebApplicationFirewallOperatorBeginsWith ...
+	WebApplicationFirewallOperatorBeginsWith WebApplicationFirewallOperator = "BeginsWith"
+	// WebApplicationFirewallOperatorContains ...
+	WebApplicationFirewallOperatorContains WebApplicationFirewallOperator = "Contains"
+	// WebApplicationFirewallOperatorEndsWith ...
+	WebApplicationFirewallOperatorEndsWith WebApplicationFirewallOperator = "EndsWith"
+	// WebApplicationFirewallOperatorEqual ...
+	WebApplicationFirewallOperatorEqual WebApplicationFirewallOperator = "Equal"
+	// WebApplicationFirewallOperatorGreaterThan ...
+	WebApplicationFirewallOperatorGreaterThan WebApplicationFirewallOperator = "GreaterThan"
+	// WebApplicationFirewallOperatorGreaterThanOrEqual ...
+	WebApplicationFirewallOperatorGreaterThanOrEqual WebApplicationFirewallOperator = "GreaterThanOrEqual"
+	// WebApplicationFirewallOperatorIPMatch ...
+	WebApplicationFirewallOperatorIPMatch WebApplicationFirewallOperator = "IPMatch"
+	// WebApplicationFirewallOperatorLessThan ...
+	WebApplicationFirewallOperatorLessThan WebApplicationFirewallOperator = "LessThan"
+	// WebApplicationFirewallOperatorLessThanOrEqual ...
+	WebApplicationFirewallOperatorLessThanOrEqual WebApplicationFirewallOperator = "LessThanOrEqual"
+	// WebApplicationFirewallOperatorRegex ...
+	WebApplicationFirewallOperatorRegex WebApplicationFirewallOperator = "Regex"
+)
+
+// PossibleWebApplicationFirewallOperatorValues returns an array of possible values for the WebApplicationFirewallOperator const type.
+func PossibleWebApplicationFirewallOperatorValues() []WebApplicationFirewallOperator {
+	return []WebApplicationFirewallOperator{WebApplicationFirewallOperatorBeginsWith, WebApplicationFirewallOperatorContains, WebApplicationFirewallOperatorEndsWith, WebApplicationFirewallOperatorEqual, WebApplicationFirewallOperatorGreaterThan, WebApplicationFirewallOperatorGreaterThanOrEqual, WebApplicationFirewallOperatorIPMatch, WebApplicationFirewallOperatorLessThan, WebApplicationFirewallOperatorLessThanOrEqual, WebApplicationFirewallOperatorRegex}
+}
+
 // WebApplicationFirewallPolicy enumerates the values for web application firewall policy.
 type WebApplicationFirewallPolicy string
 
@@ -1938,6 +1915,29 @@ const (
 // PossibleWebApplicationFirewallPolicyValues returns an array of possible values for the WebApplicationFirewallPolicy const type.
 func PossibleWebApplicationFirewallPolicyValues() []WebApplicationFirewallPolicy {
 	return []WebApplicationFirewallPolicy{WebApplicationFirewallPolicyCreating, WebApplicationFirewallPolicyDeleting, WebApplicationFirewallPolicyDisabled, WebApplicationFirewallPolicyDisabling, WebApplicationFirewallPolicyEnabled, WebApplicationFirewallPolicyEnabling}
+}
+
+// WebApplicationFirewallTransform enumerates the values for web application firewall transform.
+type WebApplicationFirewallTransform string
+
+const (
+	// HTMLEntityDecode ...
+	HTMLEntityDecode WebApplicationFirewallTransform = "HtmlEntityDecode"
+	// Lowercase ...
+	Lowercase WebApplicationFirewallTransform = "Lowercase"
+	// RemoveNulls ...
+	RemoveNulls WebApplicationFirewallTransform = "RemoveNulls"
+	// Trim ...
+	Trim WebApplicationFirewallTransform = "Trim"
+	// URLDecode ...
+	URLDecode WebApplicationFirewallTransform = "UrlDecode"
+	// URLEncode ...
+	URLEncode WebApplicationFirewallTransform = "UrlEncode"
+)
+
+// PossibleWebApplicationFirewallTransformValues returns an array of possible values for the WebApplicationFirewallTransform const type.
+func PossibleWebApplicationFirewallTransformValues() []WebApplicationFirewallTransform {
+	return []WebApplicationFirewallTransform{HTMLEntityDecode, Lowercase, RemoveNulls, Trim, URLDecode, URLEncode}
 }
 
 // AddressSpace addressSpace contains an array of IP address ranges that can be used by subnets of the
@@ -7892,8 +7892,8 @@ type CustomRule struct {
 	RuleType *string `json:"ruleType,omitempty"`
 	// MatchConditions - List of match conditions
 	MatchConditions *[]MatchCondition `json:"matchConditions,omitempty"`
-	// Action - Type of Actions. Possible values include: 'ActionAllow', 'ActionBlock', 'ActionLog'
-	Action Action `json:"action,omitempty"`
+	// Action - Type of Actions. Possible values include: 'WebApplicationFirewallActionAllow', 'WebApplicationFirewallActionBlock', 'WebApplicationFirewallActionLog'
+	Action WebApplicationFirewallAction `json:"action,omitempty"`
 }
 
 // CustomRules defines contents of custom rules
@@ -17951,15 +17951,15 @@ type ManagedServiceIdentityUserAssignedIdentitiesValue struct {
 // MatchCondition define match conditions
 type MatchCondition struct {
 	// MatchVariables - List of match variables
-	MatchVariables *[]MatchVariable1 `json:"matchVariables,omitempty"`
-	// Operator - Describes operator to be matched. Possible values include: 'OperatorIPMatch', 'OperatorEqual', 'OperatorContains', 'OperatorLessThan', 'OperatorGreaterThan', 'OperatorLessThanOrEqual', 'OperatorGreaterThanOrEqual', 'OperatorBeginsWith', 'OperatorEndsWith', 'OperatorRegex'
-	Operator Operator `json:"operator,omitempty"`
+	MatchVariables *[]MatchVariable `json:"matchVariables,omitempty"`
+	// Operator - Describes operator to be matched. Possible values include: 'WebApplicationFirewallOperatorIPMatch', 'WebApplicationFirewallOperatorEqual', 'WebApplicationFirewallOperatorContains', 'WebApplicationFirewallOperatorLessThan', 'WebApplicationFirewallOperatorGreaterThan', 'WebApplicationFirewallOperatorLessThanOrEqual', 'WebApplicationFirewallOperatorGreaterThanOrEqual', 'WebApplicationFirewallOperatorBeginsWith', 'WebApplicationFirewallOperatorEndsWith', 'WebApplicationFirewallOperatorRegex'
+	Operator WebApplicationFirewallOperator `json:"operator,omitempty"`
 	// NegateCondition - Describes if this is negate condition or not
 	NegateCondition *bool `json:"negateCondition,omitempty"`
 	// MatchValues - Match value
 	MatchValues *[]string `json:"matchValues,omitempty"`
 	// Transforms - List of transforms
-	Transforms *[]Transform `json:"transforms,omitempty"`
+	Transforms *[]WebApplicationFirewallTransform `json:"transforms,omitempty"`
 }
 
 // MatchedRule matched rule.
@@ -17970,10 +17970,10 @@ type MatchedRule struct {
 	Action *string `json:"action,omitempty"`
 }
 
-// MatchVariable1 define match variables
-type MatchVariable1 struct {
+// MatchVariable define match variables
+type MatchVariable struct {
 	// Name - Match Variable. Possible values include: 'RemoteAddr', 'RequestMethod', 'QueryString', 'PostArgs', 'RequestURI', 'RequestHeaders', 'RequestBody', 'RequestCookies'
-	Name MatchVariable `json:"name,omitempty"`
+	Name WebApplicationFirewallMatchVariable `json:"name,omitempty"`
 	// Selector - Describes field of the matchVariable collection
 	Selector *string `json:"selector,omitempty"`
 }
@@ -19655,10 +19655,10 @@ func (prfr *PatchRouteFilterRule) UnmarshalJSON(body []byte) error {
 
 // PolicySettings defines contents of a web application firewall global configuration
 type PolicySettings struct {
-	// EnabledState - describes if the policy is in enabled state or disabled state. Possible values include: 'EnabledStateDisabled', 'EnabledStateEnabled'
-	EnabledState EnabledState `json:"enabledState,omitempty"`
-	// Mode - Describes if it is in detection mode  or prevention mode at policy level. Possible values include: 'ModePrevention', 'ModeDetection'
-	Mode Mode `json:"mode,omitempty"`
+	// EnabledState - describes if the policy is in enabled state or disabled state. Possible values include: 'WebApplicationFirewallEnabledStateDisabled', 'WebApplicationFirewallEnabledStateEnabled'
+	EnabledState WebApplicationFirewallEnabledState `json:"enabledState,omitempty"`
+	// Mode - Describes if it is in detection mode  or prevention mode at policy level. Possible values include: 'WebApplicationFirewallModePrevention', 'WebApplicationFirewallModeDetection'
+	Mode WebApplicationFirewallMode `json:"mode,omitempty"`
 }
 
 // PrepareNetworkPoliciesRequest ...
